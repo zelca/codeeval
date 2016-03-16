@@ -1,4 +1,4 @@
-object Main extends App {
+object AlphabetBlocks extends App {
 
   val file =
     if (args.length > 0)
