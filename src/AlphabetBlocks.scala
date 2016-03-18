@@ -16,7 +16,7 @@ object AlphabetBlocks extends App {
   lines.collect {
     case AlphabetBlocksInput(input) => input
   } map {
-    input => check(input._1, input._2)
+    case (word, blocks) => check(word, blocks)
   } foreach {
     result => println(result.toString.capitalize)
   }

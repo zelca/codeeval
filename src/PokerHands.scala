@@ -18,7 +18,7 @@ object PokerHands extends App {
   lines.collect {
     case PokerHandsInput(input) => input
   } map {
-    input => compare(eval(input._1), eval(input._2))
+    case (left, right) => compare(eval(left), eval(right))
   } foreach println
 
   type Value = List[Int]
@@ -80,7 +80,8 @@ object PokerHands extends App {
   def fullHouse = new PartialFunction[List[Card], Value] {
     override def isDefinedAt(cards: List[Card]): Boolean = {
       val three = sameValue(cards)
-      three.size == 3 && sameValue(cards diff three).size == 2
+      val pair = sameValue(cards diff three)
+      three.size == 3 && pair.size == 2
     }
 
     override def apply(cards: List[Card]): Value = {
@@ -119,8 +120,9 @@ object PokerHands extends App {
 
   def twoPairs = new PartialFunction[List[Card], Value] {
     override def isDefinedAt(cards: List[Card]): Boolean = {
-      val pair = sameValue(cards)
-      pair.size == 2 && sameValue(cards diff pair).size == 2
+      val high = sameValue(cards)
+      val low = sameValue(cards diff high)
+      high.size == 2 && low.size == 2
     }
 
     override def apply(cards: List[Card]): Value = {

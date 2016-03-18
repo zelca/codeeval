@@ -1,7 +1,7 @@
 /**
   * See <a href="https://www.codeeval.com/open_challenges/64/">Climbing Stairs</a>
   *
-  * Appears to be the Fibonacci numbers.
+  * The Fibonacci numbers.
   */
 object ClimbingStairs extends App {
 
