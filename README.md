@@ -9,3 +9,4 @@ Feel free to share your feedback.
 <p><a href="https://www.codeeval.com/open_challenges/86/">Poker Hands</a></p>
 <p><a href="https://www.codeeval.com/open_challenges/171/">DNA Alignment</a></p>
 <p><a href="https://www.codeeval.com/open_challenges/126/">Play with DNA</a></p>
+<p><a href="https://www.codeeval.com/open_challenges/155/">ASCII Decryption</a></p>
