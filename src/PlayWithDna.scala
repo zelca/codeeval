@@ -16,9 +16,7 @@ object PlayWithDna extends App {
   val lines = scala.io.Source.fromFile(file).getLines()
 
   lines.collect {
-    case PlayWithDnaInput(input) => input
-  } map {
-    case (pattern, limit, dna) =>
+    case Input(pattern, limit, dna) =>
       dna.sliding(pattern.size).map(slice => (dist(pattern, slice.toList), slice)).filter(_._1 <= limit).toList
   } foreach {
     case Nil => println("No match")
@@ -51,14 +49,14 @@ object PlayWithDna extends App {
 
   }
 
-}
+  object Input {
 
-object PlayWithDnaInput {
+    // AGTTATC 2 AGTATGC
+    def unapply(line: String) = line.split(" ").toList match {
+      case pattern :: limit :: dna :: Nil => Some(pattern.toList, limit.toInt, dna)
+      case _ => None
+    }
 
-  // AGTTATC 2 AGTATGC
-  def unapply(line: String) = line.split(" ").toList match {
-    case pattern :: limit :: dna :: Nil => Some(pattern.toList, limit.toInt, dna)
-    case _ => None
   }
 
 }

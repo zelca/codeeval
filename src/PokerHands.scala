@@ -1,5 +1,5 @@
 /**
-  * See <a href="https://www.codeeval.com/open_challenges/86/">Poker Hands</a>
+  * See <a href="https://www.codeeval.com/open_challenges/86/">Poker hands</a>
   */
 object PokerHands extends App {
 
@@ -13,12 +13,21 @@ object PokerHands extends App {
 
   val lines = scala.io.Source.fromFile(file).getLines()
 
-  import PokerHandsInput._
+  // The cards are valued in the order:
+  // 2, 3, 4, 5, 6, 7, 8, 9, Ten, Jack, Queen, King, Ace.
+  // 1  2  3  4  5  6  7  8    9    10     11    12   13
+
+  val values = Map('2' -> 1, '3' -> 2, '4' -> 3,
+    '5' -> 4, '6' -> 5, '7' -> 6, '8' -> 7, '9' -> 8,
+    'T' -> 9, 'J' -> 10, 'Q' -> 11, 'K' -> 12, 'A' -> 13)
+
+  case class Card(value: Int, suit: Char) extends Ordered[Card] {
+    override def compare(that: Card): Int =
+      if (value == that.value) that.suit - suit else that.value - value
+  }
 
   lines.collect {
-    case PokerHandsInput(input) => input
-  } map {
-    case (left, right) => compare(eval(left), eval(right))
+    case Input(left, right) => compare(eval(left), eval(right))
   } foreach println
 
   type Value = List[Int]
@@ -45,10 +54,6 @@ object PokerHands extends App {
   //  8 - Four of a Kind: Four cards of the same value.
   //  9 - Straight Flush: All cards are consecutive values of same suit.
   // 10 - Royal Flush: Ten, Jack, Queen, King, Ace of same suit.
-
-  // The cards are valued in the order:
-  // 2, 3, 4, 5, 6, 7, 8, 9, Ten, Jack, Queen, King, Ace.
-  // 1  2  3  4  5  6  7  8    9    10     11    12   13
 
   def royalFlush = new PartialFunction[List[Card], Value] {
     override def isDefinedAt(cards: List[Card]): Boolean =
@@ -164,23 +169,16 @@ object PokerHands extends App {
     case _ => Nil
   }
 
-}
+  object Input {
 
-object PokerHandsInput {
+    // 6D 7H AH 7S QC 6H 2D TD JD AS
+    def unapply(line: String) = line.split(" ").toList match {
+      case cards if cards.size == 10 =>
+        val hands = cards.map(i => Card(values(i.head), i.last)).grouped(5).toList
+        Some(hands.head.sorted, hands.last.sorted)
+      case _ => None
+    }
 
-  val values = Map('2' -> 1, '3' -> 2, '4' -> 3, '5' -> 4, '6' -> 5, '7' -> 6, '8' -> 7, '9' -> 8, 'T' -> 9, 'J' -> 10, 'Q' -> 11, 'K' -> 12, 'A' -> 13)
-
-  case class Card(value: Int, suit: Char) extends Ordered[Card] {
-    override def compare(that: Card): Int =
-      if (value == that.value) that.suit - suit else that.value - value
-  }
-
-  // 6D 7H AH 7S QC 6H 2D TD JD AS
-  def unapply(line: String) = line.split(" ").toList match {
-    case cards if cards.size == 10 =>
-      val hands = cards.map(i => Card(values(i.head), i.last)).grouped(5).toList
-      Some(hands.head.sorted, hands.last.sorted)
-    case _ => None
   }
 
 }

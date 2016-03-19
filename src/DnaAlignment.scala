@@ -1,5 +1,5 @@
 /**
-  * See <a href="https://www.codeeval.com/open_challenges/171/">DNA Alignment</a>
+  * See <a href="https://www.codeeval.com/open_challenges/171/">DNA alignment</a>
   *
   * Levenshtein distance.
   */
@@ -16,9 +16,7 @@ object DnaAlignment extends App {
   val lines = scala.io.Source.fromFile(file).getLines()
 
   lines.collect {
-    case DnaAlignmentInput(input) => input
-  } map {
-    case (pattern, dna) => dist(pattern, dna)
+    case Input(pattern, dna) => dist(pattern, dna)
   } foreach println
 
   def dist(pattern: List[Char], dna: List[Char]): Int = {
@@ -50,14 +48,14 @@ object DnaAlignment extends App {
 
   }
 
-}
+  object Input {
 
-object DnaAlignmentInput {
+    // GAAAAAAT | GAAT
+    def unapply(line: String) = line.split(" \\| ").toList match {
+      case x :: y :: Nil => Some(x.toList, y.toList)
+      case _ => None
+    }
 
-  // GAAAAAAT | GAAT
-  def unapply(line: String) = line.split(" \\| ").toList match {
-    case x :: y :: Nil => Some(x.toList, y.toList)
-    case _ => None
   }
 
 }

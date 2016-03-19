@@ -4,9 +4,10 @@ Solutions for CodeEval challenges in Scala. The functional way is applied whenev
 Feel free to share your feedback.
 
 # Solved challenges:
-<p><a href="https://www.codeeval.com/open_challenges/201/">Alphabet Blocks</a></p>
-<p><a href="https://www.codeeval.com/open_challenges/64/">Climbing Stairs</a></p>
-<p><a href="https://www.codeeval.com/open_challenges/86/">Poker Hands</a></p>
-<p><a href="https://www.codeeval.com/open_challenges/171/">DNA Alignment</a></p>
+<p><a href="https://www.codeeval.com/open_challenges/201/">Alphabet blocks</a></p>
+<p><a href="https://www.codeeval.com/open_challenges/64/">Climbing stairs</a></p>
+<p><a href="https://www.codeeval.com/open_challenges/86/">Poker hands</a></p>
+<p><a href="https://www.codeeval.com/open_challenges/171/">DNA alignment</a></p>
 <p><a href="https://www.codeeval.com/open_challenges/126/">Play with DNA</a></p>
-<p><a href="https://www.codeeval.com/open_challenges/155/">ASCII Decryption</a></p>
+<p><a href="https://www.codeeval.com/open_challenges/155/">ASCII decryption</a></p>
+<p><a href="https://www.codeeval.com/open_challenges/109/">Bay bridges</a></p>

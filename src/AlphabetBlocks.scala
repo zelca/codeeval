@@ -1,5 +1,5 @@
 /**
-  * See <a href="https://www.codeeval.com/open_challenges/201/">Alphabet Blocks</a>
+  * See <a href="https://www.codeeval.com/open_challenges/201/">Alphabet blocks</a>
   */
 object AlphabetBlocks extends App {
 
@@ -14,9 +14,7 @@ object AlphabetBlocks extends App {
   val lines = scala.io.Source.fromFile(file).getLines()
 
   lines.collect {
-    case AlphabetBlocksInput(input) => input
-  } map {
-    case (word, blocks) => check(word, blocks)
+    case Input(word, blocks) => check(word, blocks)
   } foreach {
     result => println(result.toString.capitalize)
   }
@@ -26,14 +24,14 @@ object AlphabetBlocks extends App {
     case x :: xs => blocks.exists(i => i.contains(x) && check(xs, blocks - i))
   }
 
-}
+  object Input {
 
-object AlphabetBlocksInput {
+    // 4 | DOG | UPZRHR INOYLC KXDHNQ BAGMZI
+    def unapply(line: String) = line.split(" \\| ").toList match {
+      case any :: word :: blocks :: Nil => Some(word.toList, blocks.split(" ").toSet)
+      case _ => None
+    }
 
-  // 4 | DOG | UPZRHR INOYLC KXDHNQ BAGMZI
-  def unapply(line: String) = line.split(" \\| ").toList match {
-    case any :: word :: blocks :: Nil => Some(word.toList, blocks.split(" ").toSet)
-    case _ => None
   }
 
 }

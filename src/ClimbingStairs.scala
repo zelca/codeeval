@@ -1,5 +1,5 @@
 /**
-  * See <a href="https://www.codeeval.com/open_challenges/64/">Climbing Stairs</a>
+  * See <a href="https://www.codeeval.com/open_challenges/64/">Climbing stairs</a>
   *
   * The Fibonacci numbers.
   */
