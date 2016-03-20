@@ -1,17 +1,9 @@
 /**
   * See <a href="https://www.codeeval.com/open_challenges/86/">Poker hands</a>
   */
-object PokerHands extends App {
+object PokerHands extends Challenge {
 
-  val file =
-    if (args.length > 0)
-      args(0)
-    else {
-      val file = getClass.getSimpleName.init
-      getClass.getResource(file).getPath
-    }
-
-  val lines = scala.io.Source.fromFile(file).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines()
 
   // The cards are valued in the order:
   // 2, 3, 4, 5, 6, 7, 8, 9, Ten, Jack, Queen, King, Ace.

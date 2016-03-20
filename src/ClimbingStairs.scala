@@ -3,17 +3,9 @@
   *
   * The Fibonacci numbers.
   */
-object ClimbingStairs extends App {
+object ClimbingStairs extends Challenge {
 
-  val file =
-    if (args.length > 0)
-      args(0)
-    else {
-      val file = getClass.getSimpleName.init
-      getClass.getResource(file).getPath
-    }
-
-  val lines = scala.io.Source.fromFile(file).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines()
 
   lines.map(_.toInt).map(calc(_, 1, 1)).foreach(println)
 

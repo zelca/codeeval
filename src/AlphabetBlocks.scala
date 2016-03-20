@@ -1,17 +1,9 @@
 /**
   * See <a href="https://www.codeeval.com/open_challenges/201/">Alphabet blocks</a>
   */
-object AlphabetBlocks extends App {
+object AlphabetBlocks extends Challenge {
 
-  val file =
-    if (args.length > 0)
-      args(0)
-    else {
-      val file = getClass.getSimpleName.init
-      getClass.getResource(file).getPath
-    }
-
-  val lines = scala.io.Source.fromFile(file).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines()
 
   lines.collect {
     case Input(word, blocks) => check(word, blocks)
