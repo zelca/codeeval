@@ -3,7 +3,7 @@ Solutions for CodeEval challenges in Scala. The functional way is applied whenev
 
 Feel free to share your feedback.
 
-# Solved challenges:
+## Solved challenges:
 
  - <a href="https://www.codeeval.com/open_challenges/201/">Alphabet blocks</a>
  - <a href="https://www.codeeval.com/open_challenges/64/">Climbing stairs</a>
