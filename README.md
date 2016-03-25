@@ -14,5 +14,5 @@ Feel free to share your feedback.
 <p><a href="https://www.codeeval.com/open_challenges/239/">As quick as a flash</a></p>
 <p><a href="https://www.codeeval.com/open_challenges/151/">Cracking eggs</a></p>
 <p><a href="https://www.codeeval.com/open_challenges/6/">Longest common sequence</a></p>
-<p><a href="https://www.codeeval.com/open_challenges/38/">String list</a></p>\
+<p><a href="https://www.codeeval.com/open_challenges/38/">String list</a></p>
 <p><a href="https://www.codeeval.com/open_challenges/77/">Da Vyncy</a></p>
