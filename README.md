@@ -18,3 +18,4 @@ Feel free to share your feedback.
  - [Longest common sequence](https://www.codeeval.com/open_challenges/6/)
  - [String list](https://www.codeeval.com/open_challenges/38/)
  - [Da Vyncy](https://www.codeeval.com/open_challenges/77/)
+ - [Efficient Delivery](https://www.codeeval.com/open_challenges/123/)
