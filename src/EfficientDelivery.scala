@@ -1,5 +1,5 @@
 /**
-  * See <a href="https://www.codeeval.com/open_challenges/123/">Efficient Delivary</a>
+  * See <a href="https://www.codeeval.com/open_challenges/123/">Efficient Delivery</a>
   */
 object EfficientDelivery extends App {
 
