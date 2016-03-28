@@ -8,7 +8,7 @@ Feel free to share your feedback.
 
  * [Alphabet Blocks](https://www.codeeval.com/open_challenges/201/)
  * [Climbing Stairs](https://www.codeeval.com/open_challenges/64/)
- * [PokerHands](https://www.codeeval.com/open_challenges/86/)
+ * [Poker Hands](https://www.codeeval.com/open_challenges/86/)
  * [DNA Alignment](https://www.codeeval.com/open_challenges/171/)
  * [Play with DNA](https://www.codeeval.com/open_challenges/126/)
  * [ASCII Decryption](https://www.codeeval.com/open_challenges/155/)
