@@ -8,11 +8,11 @@ object MineSweeper extends Challenge {
   val deltas = for (i <- -1 to 1; j <- -1 to 1 if i != 0 || j != 0) yield (i, j)
 
   lines.collect {
-    case Input(n, m, matrix) => calc(n, m, matrix)
+    case Input(n, m, matrix) => eval(n, m, matrix)
   } foreach (result => println(result.mkString))
 
 
-  def calc(N: Int, M: Int, matrix: Array[Char]) =
+  def eval(N: Int, M: Int, matrix: Array[Char]) =
     for (index <- matrix.indices; cell = (index / M, index % M); value = matrix(index)) yield
       value match {
         case '*' => "*"

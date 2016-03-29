@@ -7,13 +7,13 @@ object CrackingEggs extends Challenge {
 
   lines.collect {
     case Input(tries, floors) =>
-      (1 to floors).find(i => floor(tries, i) >= floors).get
+      (1 to floors).find(i => eval(tries, i) >= floors).get
   } foreach println
 
-  def floor(e: Int, t: Int): Int = (e, t) match {
+  def eval(e: Int, t: Int): Int = (e, t) match {
     case (1, n) => n
     case (x, 0) => 0
-    case (x, n) => 1 + floor(x - 1, n - 1) + floor(x, n - 1)
+    case (x, n) => 1 + eval(x - 1, n - 1) + eval(x, n - 1)
   }
 
   object Input {
