@@ -21,4 +21,5 @@ Feel free to share your feedback.
  * [Efficient Delivery](https://www.codeeval.com/open_challenges/123/)
  * [Closes Pair](https://www.codeeval.com/open_challenges/51/)
  * [MineSweeper](https://www.codeeval.com/open_challenges/79/)
- * [Crime House](ttps://www.codeeval.com/open_challenges/195/)
+ * [Crime House](https://www.codeeval.com/open_challenges/195/)
+ * [Digit Statistics](https://www.codeeval.com/open_challenges/144/)
