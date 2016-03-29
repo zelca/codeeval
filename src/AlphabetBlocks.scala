@@ -3,17 +3,17 @@
   */
 object AlphabetBlocks extends Challenge {
 
-  val lines = scala.io.Source.fromFile(args(0)).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
   lines.collect {
-    case Input(word, blocks) => check(word, blocks)
+    case Input(word, blocks) => eval(word, blocks)
   } foreach {
     result => println(result.toString.capitalize)
   }
 
-  def check(word: List[Char], blocks: Set[String]): Boolean = word match {
+  def eval(word: List[Char], blocks: Set[String]): Boolean = word match {
     case Nil => true
-    case x :: xs => blocks.exists(i => i.contains(x) && check(xs, blocks - i))
+    case x :: xs => blocks.exists(i => i.contains(x) && eval(xs, blocks - i))
   }
 
   object Input {

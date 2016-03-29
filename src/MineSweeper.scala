@@ -3,7 +3,7 @@
   */
 object MineSweeper extends Challenge {
 
-  val lines = scala.io.Source.fromFile(args(0)).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
   val deltas = for (i <- -1 to 1; j <- -1 to 1 if i != 0 || j != 0) yield (i, j)
 
@@ -25,9 +25,9 @@ object MineSweeper extends Challenge {
   object Input {
 
     // 3,5;**.........*...
-    def unapply(line: String) = {
-      val input = line.split("(;|,)")
-      Some(input(0).toInt, input(1).toInt, input(2).toArray)
+    def unapply(line: String) = line.split("(;|,)").toList match {
+      case n :: m :: matrix :: Nil => Some(n.toInt, m.toInt, matrix.toArray)
+      case _ => None
     }
 
   }

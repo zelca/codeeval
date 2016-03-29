@@ -5,7 +5,7 @@
   */
 object PlayWithDna extends Challenge {
 
-  val lines = scala.io.Source.fromFile(args(0)).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
   lines.collect {
     case Input(pattern, limit, dna) =>
@@ -21,14 +21,14 @@ object PlayWithDna extends Challenge {
 
     implicit def key(i: (List[Char], List[Char])): (Int, Int) = (i._1.size, i._2.size)
 
-    lazy val mDist: FF = Memo {
+    lazy val eval: FF = Memo {
       case (Nil, s2) => s2.size
       case (s1, Nil) => s1.size
-      case (x1 :: xs1, x2 :: xs2) if x1 == x2 => mDist(xs1, xs2)
-      case (x1 :: xs1, x2 :: xs2) => mDist(xs1, xs2).min(mDist(x1 :: xs1, xs2)).min(mDist(xs1, x2 :: xs2)) + 1
+      case (x1 :: xs1, x2 :: xs2) if x1 == x2 => eval(xs1, xs2)
+      case (x1 :: xs1, x2 :: xs2) => eval(xs1, xs2).min(eval(x1 :: xs1, xs2)).min(eval(xs1, x2 :: xs2)) + 1
     }
 
-    mDist(pattern, dna)
+    eval(pattern, dna)
   }
 
   case class Memo[X, Y, K, R](f: (X, Y) => R)(implicit ev: ((X, Y)) => K) extends ((X, Y) => R) {

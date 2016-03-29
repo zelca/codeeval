@@ -3,7 +3,7 @@
   */
 object BayBridges extends Challenge {
 
-  val lines = scala.io.Source.fromFile(args(0)).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
   case class Segment(x1: Double, y1: Double, x2: Double, y2: Double, a: Double, b: Double)
 

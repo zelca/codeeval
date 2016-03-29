@@ -3,7 +3,7 @@
   */
 object PokerHands extends Challenge {
 
-  val lines = scala.io.Source.fromFile(args(0)).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
   // The cards are valued in the order:
   // 2, 3, 4, 5, 6, 7, 8, 9, Ten, Jack, Queen, King, Ace.

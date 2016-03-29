@@ -5,7 +5,7 @@
   */
 object AsQuickAsFlash extends Challenge {
 
-  val lines = scala.io.Source.fromFile(args(0)).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
   lines.collect {
     case Input(numbers) => sort(numbers)
@@ -15,26 +15,26 @@ object AsQuickAsFlash extends Challenge {
     case Nil => 0
     case x :: Nil => 0
     case x :: xs =>
-      val parts = rpart(x, xs.reverse, Nil, Nil)
+      val parts = splitRight(x, xs.reverse, Nil, Nil)
       sort(parts._1) + 1 + sort(parts._2)
   }
 
   import scala.annotation.tailrec
 
   @tailrec
-  def lpart(p: Int, n: List[Int], l: List[Int], r: List[Int]): (List[Int], List[Int]) =
-    n match {
-      case Nil => (l.reverse, r)
-      case x :: xs if x >= p => rpart(p, xs.reverse, l, x :: r)
-      case x :: xs => lpart(p, xs, x :: l, r)
+  def splitLeft(pivot: Int, list: List[Int], left: List[Int], right: List[Int]): (List[Int], List[Int]) =
+    list match {
+      case Nil => (left.reverse, right)
+      case x :: xs if x >= pivot => splitRight(pivot, xs.reverse, left, x :: right)
+      case x :: xs => splitLeft(pivot, xs, x :: left, right)
     }
 
   @tailrec
-  def rpart(p: Int, n: List[Int], l: List[Int], r: List[Int]): (List[Int], List[Int]) =
-    n match {
-      case Nil => (l.reverse, r)
-      case x :: xs if x <= p => lpart(p, xs.reverse, x :: l, r)
-      case x :: xs => rpart(p, xs, l, x :: r)
+  def splitRight(pivot: Int, list: List[Int], left: List[Int], right: List[Int]): (List[Int], List[Int]) =
+    list match {
+      case Nil => (left.reverse, right)
+      case x :: xs if x <= pivot => splitLeft(pivot, xs.reverse, x :: left, right)
+      case x :: xs => splitRight(pivot, xs, left, x :: right)
     }
 
   object Input {

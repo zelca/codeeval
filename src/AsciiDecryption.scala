@@ -5,7 +5,7 @@
   */
 object AsciiDecryption extends Challenge {
 
-  val lines = scala.io.Source.fromFile(args(0)).getLines()
+  val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
   lines.collect {
     case Input(numbers) =>
