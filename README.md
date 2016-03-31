@@ -23,3 +23,4 @@ Feel free to share your feedback.
  * [MineSweeper](https://www.codeeval.com/open_challenges/79/)
  * [Crime House](https://www.codeeval.com/open_challenges/195/)
  * [Digit Statistics](https://www.codeeval.com/open_challenges/144/)
+ * [Distinct Subsequences](https://www.codeeval.com/open_challenges/69/)
