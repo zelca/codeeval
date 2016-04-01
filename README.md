@@ -24,3 +24,4 @@ Feel free to share your feedback.
  * [Crime House](https://www.codeeval.com/open_challenges/195/)
  * [Digit Statistics](https://www.codeeval.com/open_challenges/144/)
  * [Distinct Subsequences](https://www.codeeval.com/open_challenges/69/)
+ * [Everything or Nothing](https://www.codeeval.com/open_challenges/216/)
