@@ -33,9 +33,7 @@ object PlayWithDna extends Challenge {
 
   case class Memo[X, Y, K, R](f: (X, Y) => R)(implicit ev: ((X, Y)) => K) extends ((X, Y) => R) {
 
-    import scala.collection.mutable
-
-    private val cache = mutable.Map.empty[K, R]
+    private val cache = scala.collection.mutable.Map.empty[K, R]
 
     override def apply(x: X, y: Y): R = cache.getOrElseUpdate((x, y), f(x, y))
 

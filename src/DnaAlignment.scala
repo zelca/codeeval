@@ -32,9 +32,7 @@ object DnaAlignment extends Challenge {
 
   case class Memo[X, Y, Z, K, R](f: (X, Y, Z) => R)(implicit ev: ((X, Y, Z)) => K) extends ((X, Y, Z) => R) {
 
-    import scala.collection.mutable
-
-    private val cache = mutable.Map.empty[K, R]
+    private val cache = scala.collection.mutable.Map.empty[K, R]
 
     override def apply(x: X, y: Y, z: Z): R = cache.getOrElseUpdate((x, y, z), f(x, y, z))
 
