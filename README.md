@@ -26,3 +26,4 @@ Feel free to share your feedback.
  * [Distinct Subsequences](https://www.codeeval.com/open_challenges/69/)
  * [Everything or Nothing](https://www.codeeval.com/open_challenges/216/)
  * [Grid Walk](https://www.codeeval.com/open_challenges/60/)
+ * [Grinch](https://www.codeeval.com/open_challenges/229/)
