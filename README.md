@@ -27,3 +27,4 @@ Feel free to share your feedback.
  * [Everything or Nothing](https://www.codeeval.com/open_challenges/216/)
  * [Grid Walk](https://www.codeeval.com/open_challenges/60/)
  * [Grinch](https://www.codeeval.com/open_challenges/229/)
+ * [Lakes not Cakes](https://www.codeeval.com/open_challenges/213/)
