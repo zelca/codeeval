@@ -29,3 +29,4 @@ Feel free to share your feedback.
  * [Grinch](https://www.codeeval.com/open_challenges/229/)
  * [Lakes not Cakes](https://www.codeeval.com/open_challenges/213/)
  * [Following Integer](https://www.codeeval.com/open_challenges/44/)
+ * [Glue Shredded Pieces](https://www.codeeval.com/open_challenges/185/)
