@@ -28,3 +28,4 @@ Feel free to share your feedback.
  * [Grid Walk](https://www.codeeval.com/open_challenges/60/)
  * [Grinch](https://www.codeeval.com/open_challenges/229/)
  * [Lakes not Cakes](https://www.codeeval.com/open_challenges/213/)
+ * [Following Integer](https://www.codeeval.com/open_challenges/44/)
