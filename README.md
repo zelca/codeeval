@@ -30,3 +30,4 @@ Feel free to share your feedback.
  * [Lakes not Cakes](https://www.codeeval.com/open_challenges/213/)
  * [Following Integer](https://www.codeeval.com/open_challenges/44/)
  * [Glue Shredded Pieces](https://www.codeeval.com/open_challenges/185/)
+ * [Longest Path](https://www.codeeval.com/open_challenges/182/)

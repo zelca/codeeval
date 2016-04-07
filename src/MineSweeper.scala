@@ -11,7 +11,6 @@ object MineSweeper extends Challenge {
     case Input(n, m, matrix) => eval(n, m, matrix)
   } foreach (result => println(result.mkString))
 
-
   def eval(N: Int, M: Int, matrix: Array[Char]) =
     for (index <- matrix.indices; cell = (index / M, index % M); value = matrix(index)) yield
       value match {
