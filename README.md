@@ -31,3 +31,4 @@ Feel free to share your feedback.
  * [Following Integer](https://www.codeeval.com/open_challenges/44/)
  * [Glue Shredded Pieces](https://www.codeeval.com/open_challenges/185/)
  * [Longest Path](https://www.codeeval.com/open_challenges/182/)
+ * [Mars Network](https://www.codeeval.com/open_challenges/164/)
