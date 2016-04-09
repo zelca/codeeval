@@ -32,3 +32,4 @@ Feel free to share your feedback.
  * [Glue Shredded Pieces](https://www.codeeval.com/open_challenges/185/)
  * [Longest Path](https://www.codeeval.com/open_challenges/182/)
  * [Mars Network](https://www.codeeval.com/open_challenges/164/)
+ * [Robot Movements](https://www.codeeval.com/open_challenges/56/)

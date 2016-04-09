@@ -5,7 +5,7 @@ object LongestPath extends Challenge {
 
   val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
-  val moves = List((-1, 0), (1, 0), (0, 1), (0, -1))
+  val moves = for (i <- -1 to 1; j <- -1 to 1 if (i + j).abs == 1) yield (i, j)
 
   lines.collect {
     case Input(matrix) =>
