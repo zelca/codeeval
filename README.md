@@ -34,3 +34,4 @@ Feel free to share your feedback.
  * [Mars Network](https://www.codeeval.com/open_challenges/164/)
  * [Robot Movements](https://www.codeeval.com/open_challenges/56/)
  * [PrefixExpressions](https://www.codeeval.com/open_challenges/7/)
+ * [Seat Your Team](https://www.codeeval.com/open_challenges/118/)
