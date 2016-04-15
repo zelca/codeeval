@@ -35,3 +35,4 @@ Any feedback is appreciated.
  * [Robot Movements](https://www.codeeval.com/open_challenges/56/)
  * [Prefix Expressions](https://www.codeeval.com/open_challenges/7/)
  * [Seat Your Team](https://www.codeeval.com/open_challenges/118/)
+ * [Straight Lines](https://www.codeeval.com/open_challenges/204/)
