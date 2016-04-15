@@ -33,3 +33,4 @@ Feel free to share your feedback.
  * [Longest Path](https://www.codeeval.com/open_challenges/182/)
  * [Mars Network](https://www.codeeval.com/open_challenges/164/)
  * [Robot Movements](https://www.codeeval.com/open_challenges/56/)
+ * [PrefixExpressions](https://www.codeeval.com/open_challenges/7/)
