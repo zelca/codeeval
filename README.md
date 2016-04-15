@@ -2,9 +2,9 @@
 
 Solutions for CodeEval challenges in Scala. The functional way is applied whenever possible. Only challenges from the hard level are being solved.
 
-Feel free to share your feedback.
+Any feedback is appreciated.
 
-## Solved challenges:
+## Solved challenges [30 of 77]:
 
  * [Alphabet Blocks](https://www.codeeval.com/open_challenges/201/)
  * [Climbing Stairs](https://www.codeeval.com/open_challenges/64/)
@@ -33,5 +33,5 @@ Feel free to share your feedback.
  * [Longest Path](https://www.codeeval.com/open_challenges/182/)
  * [Mars Network](https://www.codeeval.com/open_challenges/164/)
  * [Robot Movements](https://www.codeeval.com/open_challenges/56/)
- * [PrefixExpressions](https://www.codeeval.com/open_challenges/7/)
+ * [Prefix Expressions](https://www.codeeval.com/open_challenges/7/)
  * [Seat Your Team](https://www.codeeval.com/open_challenges/118/)
