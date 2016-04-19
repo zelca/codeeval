@@ -4,7 +4,7 @@ Solutions for CodeEval challenges in Scala. The functional way is applied whenev
 
 Any feedback is appreciated.
 
-## Solved challenges [30 of 77]:
+## Solved challenges [31 of 77]:
 
  * [Alphabet Blocks](https://www.codeeval.com/open_challenges/201/)
  * [Climbing Stairs](https://www.codeeval.com/open_challenges/64/)
@@ -36,3 +36,4 @@ Any feedback is appreciated.
  * [Prefix Expressions](https://www.codeeval.com/open_challenges/7/)
  * [Seat Your Team](https://www.codeeval.com/open_challenges/118/)
  * [Straight Lines](https://www.codeeval.com/open_challenges/204/)
+ * [The Labyrinth](https://www.codeeval.com/open_challenges/157/)
