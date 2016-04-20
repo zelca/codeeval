@@ -38,3 +38,4 @@ Any feedback is appreciated.
  * [Straight Lines](https://www.codeeval.com/open_challenges/204/)
  * [The Labyrinth](https://www.codeeval.com/open_challenges/157/)
  * [Text to Number](https://www.codeeval.com/open_challenges/110/)
+ * [Text Dollar](https://www.codeeval.com/open_challenges/52/)
