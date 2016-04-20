@@ -37,3 +37,4 @@ Any feedback is appreciated.
  * [Seat Your Team](https://www.codeeval.com/open_challenges/118/)
  * [Straight Lines](https://www.codeeval.com/open_challenges/204/)
  * [The Labyrinth](https://www.codeeval.com/open_challenges/157/)
+ * [Text to Number](https://www.codeeval.com/open_challenges/110/)
