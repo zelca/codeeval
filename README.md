@@ -40,3 +40,4 @@ Any feedback is appreciated.
  * [Text to Number](https://www.codeeval.com/open_challenges/110/)
  * [Text Dollar](https://www.codeeval.com/open_challenges/52/)
  * [String Permutations](https://www.codeeval.com/open_challenges/14/)
+ * [Spiral Printing](https://www.codeeval.com/open_challenges/57/)
