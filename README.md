@@ -41,3 +41,4 @@ Any feedback is appreciated.
  * [Text Dollar](https://www.codeeval.com/open_challenges/52/)
  * [String Permutations](https://www.codeeval.com/open_challenges/14/)
  * [Spiral Printing](https://www.codeeval.com/open_challenges/57/)
+ * [Repeated Substring](https://www.codeeval.com/open_challenges/53/)
