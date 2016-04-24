@@ -43,3 +43,4 @@ Any feedback is appreciated.
  * [Spiral Printing](https://www.codeeval.com/open_challenges/57/)
  * [Repeated Substring](https://www.codeeval.com/open_challenges/53/)
  * [Telephone Words](https://www.codeeval.com/open_challenges/59/)
+ * [Levenshtein Distance](https://www.codeeval.com/open_challenges/58/)
