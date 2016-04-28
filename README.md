@@ -2,9 +2,7 @@
 
 Solutions for CodeEval challenges in Scala. The functional way is applied whenever possible. Only challenges from the hard level are being solved.
 
-Any feedback is appreciated.
-
-## Solved challenges [40 of 77]:
+## Solved challenges [42 of 77]:
 
  * [Alphabet Blocks](https://www.codeeval.com/open_challenges/201/)
  * [Climbing Stairs](https://www.codeeval.com/open_challenges/64/)
@@ -47,3 +45,4 @@ Any feedback is appreciated.
  * [Distinct Triangles](https://www.codeeval.com/open_challenges/188/)
  * [Palindromic Ranges](https://www.codeeval.com/open_challenges/47/)
  * [The Tourist](https://www.codeeval.com/open_challenges/219/)
+ * [Ugly Numbers](https://www.codeeval.com/open_challenges/188/)
