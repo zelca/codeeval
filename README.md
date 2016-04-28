@@ -46,3 +46,4 @@ Any feedback is appreciated.
  * [Levenshtein Distance](https://www.codeeval.com/open_challenges/58/)
  * [Distinct Triangles](https://www.codeeval.com/open_challenges/188/)
  * [Palindromic Ranges](https://www.codeeval.com/open_challenges/47/)
+ * [The Tourist](https://www.codeeval.com/open_challenges/219/)
