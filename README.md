@@ -47,3 +47,4 @@ Solutions for CodeEval challenges in Scala. The functional way is applied whenev
  * [The Tourist](https://www.codeeval.com/open_challenges/219/)
  * [Ugly Numbers](https://www.codeeval.com/open_challenges/188/)
  * [Word Search](https://www.codeeval.com/open_challenges/65/)
+ * [Message Decoding](https://www.codeeval.com/open_challenges/36/)
