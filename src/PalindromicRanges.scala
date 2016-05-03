@@ -7,12 +7,15 @@ object PalindromicRanges extends Challenge {
 
   lines.collect {
     case Input(range) =>
-      val palindromes = range.map(x => fp(x.toString.toList)).toList
+      val palindromes = range.map(x => convert(x.toString.toList)).toList
       eval(palindromes)
   } foreach println
 
-  def fp(x: List[Char]): Int =
-    if (x.size <= 1) 1 else if (x.head == x.last) fp(x.tail.init) else 0
+  import scala.annotation.tailrec
+
+  @tailrec
+  def convert(x: List[Char]): Int =
+    if (x.size <= 1) 1 else if (x.head == x.last) convert(x.tail.init) else 0
 
   def eval(i: List[Int]): Int = i match {
     case Nil => 0

@@ -7,6 +7,9 @@ object RepeatedSubstring extends Challenge {
 
   lines.map(line => eval(line, line.length / 2)).foreach(println)
 
+  import scala.annotation.tailrec
+
+  @tailrec
   def eval(text: String, pos: Int): String = pos match {
     case 0 => "NONE"
     case _ =>

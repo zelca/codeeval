@@ -33,6 +33,9 @@ object TheTourist extends Challenge {
 
   object Input {
 
+    import scala.annotation.tailrec
+
+    @tailrec
     def routes(data: List[List[Int]], cities: Set[Int], distances: Distances): (Int, Distances) =
       data match {
         case Nil =>

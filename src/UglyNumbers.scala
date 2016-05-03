@@ -35,6 +35,9 @@ object UglyNumbers extends Challenge {
 
   object Input {
 
+    import scala.annotation.tailrec
+
+    @tailrec
     def filter(line: List[Char]): List[Char] = line match {
       case '0' :: Nil => '0' :: Nil
       case '0' :: xs => filter(xs)

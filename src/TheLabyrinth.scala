@@ -24,6 +24,9 @@ object TheLabyrinth extends Challenge {
          n = if (c == maze(r).size - 1) "\n" else "") print(v + n)
   }
 
+  import scala.annotation.tailrec
+
+  @tailrec
   def path(cells: Iterable[XY], exit: XY, valid: Set[XY], res: Map[XY, XY]): List[XY] =
     if (cells.size > 1 && cells.exists(_ == exit))
       build(cells.find(_ == exit), res, Nil)
@@ -36,6 +39,7 @@ object TheLabyrinth extends Challenge {
       path(neighbors.keys, exit, valid -- neighbors.keys, res ++ neighbors)
     }
 
+  @tailrec
   def build(cell: Option[XY], res: Map[XY, XY], path: List[XY]): List[XY] = cell match {
     case None => path
     case Some(x) => build(res.get(x), res, x :: path)

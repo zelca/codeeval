@@ -7,6 +7,9 @@ object DaVyncy extends Challenge {
 
   lines.map(_.split(";").toList).map(concat(_)).foreach(println)
 
+  import scala.annotation.tailrec
+
+  @tailrec
   def concat(parts: List[String]): String = {
     val filtered = parts.filterNot(y => parts.exists(x => x != y && x.contains(y)))
     val distances = for (x <- filtered; y <- filtered if x != y) yield (x, y, dist(x, y))
