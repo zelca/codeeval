@@ -51,3 +51,4 @@ Solutions for CodeEval challenges in Scala. The functional way is applied whenev
  * [String Substitution](https://www.codeeval.com/open_challenges/50/)
  * [Minimum Path Sum](https://www.codeeval.com/open_challenges/72/)
  * [String Search](https://www.codeeval.com/open_challenges/28/)
+ * [Skyscrapers](https://www.codeeval.com/open_challenges/120/)
