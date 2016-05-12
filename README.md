@@ -2,7 +2,7 @@
 
 Solutions for CodeEval challenges in Scala. The functional way is applied whenever possible. Only challenges from the hard level are being solved.
 
-## Solved challenges [45 of 77]:
+## Solved challenges [48 of 77]:
 
  * [Alphabet Blocks](https://www.codeeval.com/open_challenges/201/)
  * [Climbing Stairs](https://www.codeeval.com/open_challenges/64/)
