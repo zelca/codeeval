@@ -11,7 +11,7 @@ object GridWalk extends App {
     cell => (cell._1, cell._2 - 1),
     cell => (cell._1 - 1, cell._2))
 
-  val newAndValid: (Cell => Boolean) = new (Cell => Boolean) {
+  val newAndValid = new (Cell => Boolean) {
 
     val processed = scala.collection.mutable.Set.empty[Cell]
 

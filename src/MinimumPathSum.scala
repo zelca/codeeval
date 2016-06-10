@@ -5,17 +5,19 @@ object MinimumPathSum extends Challenge {
 
   val lines = scala.io.Source.fromFile(args(0)).getLines().filter(_.length > 0)
 
-  val moves: List[Tuple2[Int, Int] => (Int, Int)] = List(
+  type Cell = (Int, Int)
+
+  type Row = List[Int]
+
+  type Matrix = List[Row]
+
+  val moves: List[Cell => Cell] = List(
     cell => (cell._1 + 1, cell._2),
     cell => (cell._1, cell._2 + 1))
 
   parse(lines.toList, -1, Nil).map {
     matrix => eval(Map((0, 0) -> matrix.head.head), matrix, matrix.size)
   } foreach println
-
-  type Row = List[Int]
-
-  type Matrix = List[Row]
 
   def parse(lines: List[String], count: Int, res: Matrix): List[Matrix] = (lines, count) match {
     case (Nil, _) =>
@@ -32,7 +34,7 @@ object MinimumPathSum extends Challenge {
   import scala.annotation.tailrec
 
   @tailrec
-  def eval(res: Map[(Int, Int), Int], matrix: Matrix, size: Int): Int =
+  def eval(res: Map[Cell, Int], matrix: Matrix, size: Int): Int =
     if (res.size == 1 && res.contains((size - 1, size - 1))) res(size - 1, size - 1)
     else {
       val all = res.toList.flatMap(x => moves.map(m => (m(x._1), x._2)).filter(x => x._1._1 < size && x._1._2 < size))
